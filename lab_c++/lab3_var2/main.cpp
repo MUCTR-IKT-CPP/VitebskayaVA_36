@@ -92,7 +92,7 @@ void minDenom(vector<Banknote>& wallet, int denom, int N){
             result[wallet[i].name]++;
         }
     }
-    for (auto& note : result) {
+    for (auto note : result) {
         cout << "Denomination " << note.first << ": " << note.second << endl;
     }
 }
@@ -113,7 +113,7 @@ void sortDenomAndVal(vector<Banknote>& wallet){
 
     map<pair<string, int>, int> banknoteCount;
 
-    for (auto& note : wallet) {
+    for (auto note : wallet) {
         banknoteCount[{note.name, note.denomination}]++;  
     }
 
@@ -153,6 +153,7 @@ int main(){
     int N;
     cout << "Enter the value N:" << endl ;
     cin >> N;   
+    
     const int quan_varios = 10;
     string name_banknote[quan_varios]  {"USD", "EUR", "GBP", "CHF", "JPY", "CAD", "AUD", "CNY", "SGD", "NOK"}; 
     double rate_banknote[quan_varios] = {90, 95, 110, 100, 0.65, 70, 65, 13, 65, 9}; 
